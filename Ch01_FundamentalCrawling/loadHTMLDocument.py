@@ -22,3 +22,10 @@ print("-" * 50)
 print(soup.find("div", class_="elice").get_text())
 
 print("=" * 50)
+
+# 4. id 가 "main" 인 <div> 태그 부분의 텍스트를 출력
+print(soup.find("div"))
+print('-' * 50)
+print(soup.find("div", id="main"))
+print('-' * 50)
+print(soup.find("div", id="main").get_text())
