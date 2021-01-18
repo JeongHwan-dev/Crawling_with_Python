@@ -33,7 +33,7 @@ def get_url(movie):
 def main():
     list_href = []
 
-    custom_headeer = {
+    custom_header = {
         'referer': 'https://www.naver.com/',
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
                       'Chrome/87.0.4280.141 Safari/537.36'
@@ -43,7 +43,7 @@ def main():
     movie = input("영화 제목을 입력하세요. \n > ")
 
     url = get_url(movie)
-    req = requests.get(url, headers=custom_headeer)
+    req = requests.get(url, headers=custom_header)
     soup = BeautifulSoup(req.text, "html.parser")
 
     movie_url = get_href(soup)
