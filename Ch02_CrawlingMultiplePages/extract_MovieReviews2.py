@@ -1,4 +1,5 @@
 # 특정 영화 리뷰 추출하기
+
 import requests
 from bs4 import BeautifulSoup
 
